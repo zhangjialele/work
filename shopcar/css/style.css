@@ -1,0 +1,173 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column; }
+
+body {
+  font-size: .12rem; }
+
+* {
+  box-sizing: border-box; }
+
+header {
+  height: .34rem;
+  line-height: .34rem;
+  background: #ff8803;
+  position: relative;
+  color: #fbfbfd; }
+  header p {
+    text-align: center; }
+  header span {
+    position: absolute;
+    font-size: .1rem;
+    right: .12rem;
+    top: 0rem; }
+
+section {
+  flex: 1;
+  background: #f3f8ed;
+  overflow: hidden;
+  overflow-y: scroll; }
+  section .app {
+    flex: 1; }
+    section .app .top {
+      height: .32rem;
+      background: #fee7b3;
+      display: flex;
+      text-align: center;
+      font-size: .1rem; }
+      section .app .top i {
+        flex: 1;
+        line-height: .32rem;
+        color: #9f865f; }
+      section .app .top i:first-child {
+        color: #ff4a04; }
+      section .app .top p {
+        flex: 8;
+        padding-top: .05rem;
+        text-align: left;
+        color: #f75e42; }
+    section .app .content {
+      background: #ffffff;
+      margin-bottom: .1rem; }
+      section .app .content .title {
+        height: .35rem;
+        line-height: .35rem;
+        border-top: 1px solid #f3f3f3;
+        border-bottom: 1px solid #f3f3f3;
+        position: relative; }
+        section .app .content .title input {
+          padding: 0 .05rem; }
+        section .app .content .title img {
+          width: .12rem;
+          height: .14rem;
+          position: absolute;
+          left: .26rem;
+          top: .1rem; }
+        section .app .content .title span {
+          color: #a1a1a1;
+          font-size: .1rem;
+          padding-left: .2rem; }
+        section .app .content .title i {
+          color: #c9c9c9;
+          padding-left: .07rem; }
+      section .app .content .main {
+        display: flex; }
+        section .app .content .main .left {
+          width: 8%;
+          position: relative; }
+          section .app .content .main .left input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto; }
+        section .app .content .main dl {
+          width: 92%;
+          display: flex; }
+          section .app .content .main dl dt {
+            flex: 3;
+            padding: .06rem .16rem;
+            text-align: center; }
+            section .app .content .main dl dt img {
+              width: 100%; }
+          section .app .content .main dl dd {
+            flex: 7;
+            padding-top: .1rem; }
+            section .app .content .main dl dd p {
+              color: #828385;
+              line-height: .2rem;
+              font-size: .1rem;
+              position: relative; }
+              section .app .content .main dl dd p span {
+                color: #f68754; }
+              section .app .content .main dl dd p span:last-child {
+                color: #acacac;
+                padding-left: .04rem; }
+              section .app .content .main dl dd p .count {
+                position: absolute;
+                right: .1rem;
+                color: #929292;
+                top: 0rem; }
+            section .app .content .main dl dd p:first-child span {
+              padding-right: .3rem;
+              display: inline-block;
+              color: #858585; }
+            section .app .content .main dl dd p:first-child img {
+              width: .1rem;
+              height: .1rem;
+              position: absolute;
+              right: .1rem;
+              top: .05rem; }
+
+.buy {
+  background: #ffffff;
+  width: 100%;
+  height: .33rem;
+  line-height: .33rem;
+  border-top: 1px solid #eaeaea;
+  position: relative; }
+  .buy input {
+    padding: 0 .16rem; }
+  .buy span {
+    font-size: .11rem;
+    color: #919191; }
+  .buy p {
+    position: absolute;
+    width: 40%;
+    right: 0;
+    top: 0;
+    text-align: center;
+    display: flex; }
+    .buy p span {
+      flex: 4;
+      display: block;
+      font-size: .1rem; }
+    .buy p .go {
+      flex: 6;
+      background: #ff6f02;
+      color: #ffffff; }
+
+footer {
+  height: .35rem;
+  border-top: 1px solid #f2f2f2; }
+  footer ul {
+    display: flex; }
+    footer ul li {
+      flex: 1;
+      text-align: center; }
+      footer ul li i {
+        padding-top: .015rem;
+        color: #777777; }
+      footer ul li p {
+        color: #838383;
+        font-size: .1rem;
+        padding-top: .01rem; }
+    footer ul .active i {
+      color: #f36b0e; }
+    footer ul .active p {
+      color: #f6bb87; }
+
+/*# sourceMappingURL=style.css.map */

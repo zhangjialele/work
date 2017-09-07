@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css">
+    <link type='text/css' rel="stylesheet" href="css/reset.css">
+    <link type='text/css' rel="stylesheet" href="css/common.css">
+    <link type='text/css' rel="stylesheet" href="css/style.css">
+     <script src="js/jquery.js"></script>
+    <script src="js/vue2.js"></script>
+</head>
+<body>
+    <header>
+       <p>购物车(102)</p>
+       <span>编辑</span>     
+    </header>
+    <section>
+        <div class="app" id="app">
+        <div class="top">
+            <i class="fa fa-bell-o f16"></i>
+            <p>我的天猫超市卡可用余额:79元，在天猫APP可使用超市卡结算哦！</p>
+            <i>×</i>
+        </div>
+        <div class="content" v-for="v in dataArr">
+            <div class="title">
+                <input type="checkbox">
+                <img v-bind:src="v.img" alt="">
+                <span>{{v.tit}}</span>
+                <i class="fa fa-angle-right f16"></i>
+            </div>
+            <div class="main" v-for="i in v.sub">
+                <div class="left"><input type="checkbox"></div>
+                <dl>
+                    <dt><img v-bind:src="i.img" alt=""></dt>
+                    <dd>
+                        <p><span>{{i.tit}}</span><img src="images/img_18.jpg" alt=""></p>
+                        <p><span>{{i.price1}}</span><span>{{i.price2}}</span><span class="count">{{i.count}}</span></p>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        </div>
+        
+    </section>
+    <div class="buy">
+            <input type="checkbox"><span>全选</span>
+            <p><span>合计：￥0</span><span class="go">结算(0)</span></p>
+        </div>
+    <footer>
+        <ul>
+            <li><i class="fa fa-home f16"></i><p>首页</p></li>
+            <li><i class="fa fa-heart-o f16"></i><p>微淘</p></li>
+            <li><i class="fa fa-comment-o f16"></i><p>消息</p></li>
+            <li class="active"><i class="fa fa-shopping-cart f16"></i><p>购物车</p></li>
+            <li><i class="fa fa-user-o f16"></i><p>我的淘宝</p></li>
+        </ul>
+    </footer>
+    <script>
+            var vm=new Vue({
+                el:"#app",
+                data:{
+                    dataArr:""
+              },
+            created(){
+                    var that=this;
+                    $.ajax({
+                        url:"http://localhost:8020",
+                        success:function(data){
+                            console.log(data)
+                            that.dataArr=data;
+                        }
+                    })
+                }
+            })
+    </script>
+</body>
+</html>
+
+
+
+
+
+
