@@ -1,0 +1,113 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column; }
+
+body {
+  font-size: .12rem; }
+
+* {
+  box-sizing: border-box; }
+
+header {
+  height: .44rem;
+  line-height: .44rem;
+  background: #6e564a;
+  position: relative;
+  color: #ffffff;
+  font-size: .16rem; }
+  header p {
+    text-align: center; }
+  header img {
+    width: .34rem;
+    height: .34rem;
+    position: absolute;
+    left: .1rem;
+    top: .05rem; }
+  header i {
+    position: absolute;
+    right: .1rem;
+    top: 0rem; }
+
+section {
+  flex: 1;
+  background: #ffffff;
+  overflow: hidden;
+  overflow-y: scroll; }
+  section .search {
+    padding: .05rem .1rem;
+    position: relative; }
+    section .search input {
+      height: .26rem;
+      background: #f3f3f3;
+      width: 100%;
+      border: none;
+      border-radius: 5px;
+      padding-left: .1rem;
+      padding-right: .1rem; }
+    section .search ::-webkit-input-placeholder {
+      text-align: center;
+      color: #acacac; }
+    section .search i {
+      position: absolute;
+      top: 50%;
+      margin-top: -.06rem;
+      left: 42%;
+      margin-left: -.06rem;
+      color: #c6c6cb; }
+  section .app .main {
+    border-bottom: 1px solid #f0f0f0;
+    padding-top: .03rem; }
+    section .app .main dl {
+      display: flex; }
+      section .app .main dl dt {
+        flex: 2;
+        padding: 0rem .1rem; }
+        section .app .main dl dt img {
+          width: 100%; }
+      section .app .main dl dd {
+        flex: 8;
+        padding-top: .03rem; }
+        section .app .main dl dd h4 {
+          font-size: .15rem;
+          line-height: .25rem;
+          color: #141414;
+          position: relative; }
+          section .app .main dl dd h4 span {
+            position: absolute;
+            font-size: .1rem;
+            color: #767676;
+            right: .1rem;
+            bottom: 0rem; }
+        section .app .main dl dd p {
+          font-size: .11rem;
+          line-height: .2rem;
+          color: #8c8c8c;
+          width: 1.8rem; }
+          section .app .main dl dd p span {
+            color: #e38b48;
+            padding-right: .05rem; }
+
+footer {
+  height: .48rem;
+  border-top: 1px solid #eef1f1; }
+  footer ul {
+    display: flex; }
+    footer ul li {
+      flex: 1;
+      text-align: center;
+      padding-top: .06rem; }
+      footer ul li i {
+        color: #a9adb9; }
+      footer ul li p {
+        color: #a3a3a3;
+        font-size: .1rem;
+        padding-top: .03rem;
+        padding-bottom: .03rem; }
+    footer ul .active i {
+      color: #6e564a; }
+    footer ul .active p {
+      color: #988b81; }
+
+/*# sourceMappingURL=style.css.map */

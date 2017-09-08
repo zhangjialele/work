@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link type="text/css" rel="stylesheet" href="fonts/iconfont.css">
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css">
+    <link type='text/css' rel="stylesheet" href="css/reset.css">
+    <link type='text/css' rel="stylesheet" href="css/common.css">
+    <link type='text/css' rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/vue2.js"></script>
+</head>
+<body>
+    <header>
+       <img src="images/img_03.jpg"></img>
+       <p>消息</p>
+       <i class="iconfont icon-tianjia f16"></i>  
+    </header>
+    <section>
+        <div class="search">
+            <input type="text" placeholder="搜索">
+            <i class="fa fa-search"></i>
+        </div>
+        <div class="app" id="app">
+            <div class="main" v-for="i in dataArr">
+                <dl>
+                    <dt><img v-bind:src="i.img" alt=""></dt>
+                    <dd>
+                        <h4>{{i.tit}}<span>{{i.time}}</span></h4>
+                        <p class="text-nobr"><span>{{i.biaozhu}}</span>{{i.info}}</p>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <ul>
+            <li class="active"><i class="iconfont icon-xiaoxi f20"></i><p>消息</p></li>
+            <li><i class="iconfont icon-11 f20"></i><p>联系人</p></li>
+            <li><i class="iconfont icon-icon02 f20"></i><p>动态</p></li>
+        </ul>
+    </footer>
+    <script>
+            var vm=new Vue({
+                el:"#app",
+                data:{
+                    dataArr:""
+              },
+            created(){
+                    var that=this;
+                    $.ajax({
+                       // url:"http://localhost:8020",
+                        url:"http://127.0.0.1:8880/home",
+                        success:function(data){
+                            console.log(data)
+                            that.dataArr=data;
+                        }
+                    })
+                }
+            })
+    </script>
+</body>
+</html>
+
+
+
+
+
+
