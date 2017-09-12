@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="" href="http://cdn.bootcss.com/animate.css/3.5.2/animate.min.css">
+    <link type="text/css" rel="stylesheet" href="css/reset.css">
+    <link type="text/css" rel="stylesheet" href="css/common.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <style>
+        
+        .fade-enter,
+        .fade-leave-to {
+            /*opacity: 0;*/
+            /*color: aqua*/
+        }
+        
+        .fade-enter-active,
+        .fade-leave-active {
+            /*transition: all 2s ease;*/
+            /*animation: fadein 2s*/
+            animation: bounce 5s;
+        }
+        .fade-enter-to,
+        .fade-leave {
+            /*opacity: 0.5;*/
+        }
+        
+         /*{
+            /*transition: all 2s ease;*/
+            /*animation: fadeout 2s*/
+          /*  animation: bounce 5s
+        }*/
+        
+        /*@keyframes fadein {
+            0% {
+                opacity: 0
+            }
+            100% {
+                opacity: 0.5
+            }
+        }
+        
+        @keyframes fadeout {
+            0% {
+                opacity: 0.5
+            }
+            100% {
+                opacity: 0
+            }
+        }*/
+    </style>
+</head>
+<body>
+  <header class="header"> 
+     <i class="fa fa-angle-left"></i>
+     <p>京东注册</p>  
+  </header>
+  <section class="content">
+    <div id="app">
+      
+    </div>
+  </section>
+  <template id="tem">
+    <div>
+       <transition name="fade">
+        <div class="froms" v-if="state">
+            <p>
+                <input type="text" placeholder="请输入图片验证码" v-model="yzm">
+                <span>ADDC</span>
+            </p>
+            <p>
+              <span class="qian">+86</span>
+              <input type="text" placeholder="请输入手机号" v-model.number="phone">
+              <span>验证码</span></p>
+            <p><input type="text" placeholder="请输入手机验证码" v-model.number="telY"></p>
+            <p><input type="password" placeholder="请设置6-20位登录密码" v-model="pwd"></p>
+            <p class="han">密码由6-20位字母、数字或半角符号租车，不能是10位以下纯数字/字母/半角符号，字母需区分大小写</p>
+            <p><button @click="fn()">注册</button></p>
+          
+        </div>
+        </transition>
+        <p><button @click="fn1()">动画</button></p>
+    </div>
+   
+  </template>
+</body>
+<script type='text/javascript' src='js/vue.js'></script>
+<script type='text/javascript' src='js/jquery.js'></script>
+<script>
+   var vm=new Vue({
+     el:"#app",
+     template:"#tem",
+     data:{
+      pwd:"",
+      telY:"",
+      phone:"",
+      yzm:"",
+      state:true
+     },
+     methods:{
+       fn(){
+        console.log(this.pwd,this.telY,this.phone,this.yzm)
+       },
+       fn1(){
+          this.state = !this.state
+       }
+     }
+   })
+</script>
+</html>
