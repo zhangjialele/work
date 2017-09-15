@@ -1,0 +1,115 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column; }
+
+body {
+  font-size: .12rem; }
+
+* {
+  box-sizing: border-box; }
+
+header {
+  height: .35rem;
+  line-height: .35rem;
+  background: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex; }
+  header i {
+    color: #7d7d7d; }
+  header .left {
+    flex: 1.5;
+    text-align: center; }
+  header .right {
+    flex: 2.5;
+    display: flex;
+    text-align: center; }
+    header .right i {
+      flex: 1;
+      line-height: .35rem; }
+  header .search {
+    position: relative;
+    flex: 7; }
+    header .search input {
+      height: .2rem;
+      background: #f0eff6;
+      width: 100%;
+      border: none;
+      border-radius: .1rem;
+      padding-left: .3rem; }
+    header .search ::-webkit-input-placeholder {
+      color: #acacac;
+      font-size: .1rem; }
+    header .search i {
+      position: absolute;
+      top: 50%;
+      margin-top: -.06rem;
+      left: .1rem;
+      color: #c6c6cb; }
+
+#app {
+  flex: 1;
+  display: flex;
+  flex-direction: column; }
+  #app section {
+    flex: 1;
+    background: #ffffff;
+    overflow: hidden;
+    overflow-y: scroll; }
+    #app section .nav {
+      height: .25rem;
+      line-height: .24rem;
+      background: #f3f4f6; }
+      #app section .nav ul {
+        display: flex; }
+        #app section .nav ul li {
+          flex: 1;
+          text-align: center; }
+          #app section .nav ul li a {
+            color: #5b5c5d;
+            font-size: .1rem;
+            display: inline-block;
+            padding: 0 .1rem; }
+        #app section .nav ul .active a {
+          color: #f69e95;
+          border-bottom: 1px solid #c67655; }
+    #app section .content {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 1px; }
+      #app section .content .main {
+        width: 25%;
+        height: .78rem;
+        background: #f8f8f8;
+        text-align: center;
+        border: 1px solid #ffffff;
+        padding-top: .2rem; }
+        #app section .content .main img {
+          width: .2rem;
+          height: .2rem; }
+        #app section .content .main p {
+          color: #777777;
+          font-size: .1rem; }
+  #app footer {
+    height: .48rem;
+    border-top: 1px solid #eef1f1; }
+    #app footer ul {
+      display: flex; }
+      #app footer ul li {
+        flex: 1;
+        text-align: center;
+        padding-top: .06rem; }
+        #app footer ul li i {
+          color: #424242; }
+        #app footer ul li p {
+          color: #979797;
+          font-size: .1rem;
+          padding-top: .03rem;
+          padding-bottom: .03rem; }
+      #app footer ul .active1 i {
+        color: #f15d3f; }
+      #app footer ul .active1 p {
+        color: #ad7870; }
+
+/*# sourceMappingURL=style.css.map */

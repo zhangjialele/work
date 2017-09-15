@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link type="text/css" rel="stylesheet" href="fonts/iconfont.css">
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css">
+    <link type='text/css' rel="stylesheet" href="css/reset.css">
+    <link type='text/css' rel="stylesheet" href="css/common.css">
+    <link type='text/css' rel="stylesheet" href="css/style.css">
+</head>
+<body>
+     <header>
+        <div class="left">
+             <i class="fa fa-envelope-o f16"></i>  
+        </div>
+        <div class="search">
+            <input type="text" placeholder="双鱼嘟嘟|采采|鬼故事">
+            <i class="fa fa-search"></i>
+        </div>
+        <div class="right">
+            <i class="fa fa-clock-o f16"></i>  
+            <i class="fa fa-external-link f16"></i>  
+        </div>
+    </header>
+    <div id="app">
+         <section>
+            <router-view></router-view>
+        </section>
+        <footer>
+            <ul>
+                <router-link to="index" tag="li"><i class="iconfont icon-icon02 f20"></i><p>首页</p></router-link>
+                <router-link to="/woting" tag="li"><i class="iconfont icon-11 f20"></i><p>我听</p></router-link>
+                <router-link to="/find" tag="li"><i class="iconfont icon-icon02 f20"></i><p>发现</p></router-link>
+                <router-link to="/zhibo" tag="li"><i class="iconfont icon-xiaoxi f20"></i><p>未登录</p></router-link>
+                <!--<li class="active"><i class="iconfont icon-icon02 f20"></i><p>首页</p></li>
+                <li><i class="iconfont icon-11 f20"></i><p>我听</p></li>
+                <li><i class="iconfont icon-icon02 f20"></i><p>发现</p></li>
+                <li></li>-->
+            </ul>
+        </footer>
+    </div>
+   
+</body>
+</html>
+
+
+
+
+
+
